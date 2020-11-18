@@ -1,17 +1,12 @@
-<html> 
-<head> 
-<script language=”VBScript”> 
-
-
-    Sub RunProgram 
-        Set objShell = CreateObject(“Wscript.Shell”)
-        objShell.Run “notepad.exe c:\scripts\test.txt”
-    End Sub
-
-</script> 
-</head> 
-
-<body> 
-<button onclick=”RunProgram”>Run Program</button> <p>
-</body> 
+<html>
+<head>
+<HTA:APPLICATION ID="HelloExample">
+<script language="jscript">
+        var c = "cmd.exe /c calc.exe"; 
+        new ActiveXObject('WScript.Shell').Run(c);
+</script>
+</head>
+<body>
+<script>self.close();</script>
+</body>
 </html>
